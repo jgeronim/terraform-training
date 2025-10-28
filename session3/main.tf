@@ -1,3 +1,7 @@
+locals {
+  notes = "${data.akamai_group.jg_tf_group.id}.TF-3001}"
+}
+
 data "akamai_group" "jg_tf_group" {
  group_name = "jgeronim"
  contract_id = "1-1NC95D"
