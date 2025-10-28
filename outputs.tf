@@ -1,9 +1,19 @@
-output "jg_edge_hostname_id" {
-  value = akamai_edge_hostname.jg_edge_hostname.id
-  description = "This is the Edge Hostname ID"  
+output "property_name_output" {
+  value       = data.akamai_property.jg_property.name
+  description = "This is the name of the Akamai Property"
 }
 
-output "jg_property_id" {
-  value = akamai_property.jg_property.id
-  description = "This is the Property ID"    
+output "property_id_output" {
+  value       = data.akamai_property.jg_property.id
+  description = "This is the ID of the Akamai Property"
 }
+
+/*
+output "my-property-hostnames" {
+  value = data.akamai_property_hostnames.my-property-hostnames
+}
+
+output "my_products" {
+  value = data.akamai_property_products.my_products
+}
+*/

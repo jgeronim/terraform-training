@@ -1,19 +1,23 @@
+/*
+
+resource "akamai_property" "jg_property" {
+  name        = data.akamai_property.jg_property.name
+  product_id  = data.akamai_property.jg_property.product_id
+  contract_id = data.akamai_group.jg_tf_group.contract_id
+  group_id    = data.akamai_group.jg_tf_group.id
+  hostnames {
+    cname_from = data.akamai_property_hostnames.my-property-hostnames.hostnames[0].cname_from
+    cname_to   = akamai_edge_hostname.jg_edge_hostname.edge_hostname
+    cert_provisioning_type = "DEFAULT"
+  }
+}
+
 resource "akamai_edge_hostname" "jg_edge_hostname" {
- contract_id = "1-1NC95D"
- group_id    = "19293"
- product_id = "Fresca"
- edge_hostname = "jg-edge-hostname-1.akamaihd.net"
+ contract_id = data.akamai_group.jg_tf_group.contract_id
+ group_id    = data.akamai_group.jg_tf_group.id
+ product_id = "prd_HTTP_Content_Del"
+ edge_hostname = "nobodycaresworkharder-2.me.edgesuite.net"
  ip_behavior   = "IPV4"
 }
 
-resource "akamai_property" "jg_property" {
-  name        = "JG-Property-1"
-  product_id  = "Fresca"
-  contract_id = "1-1NC95D"
-  group_id    = "19293"
-  hostnames {
-    cname_from = "jg_property.example.com"
-    cname_to   = akamai_edge_hostname.jg_edge_hostname.edge_hostname
-    cert_provisioning_type = "CPS_MANAGED"
-  }
-}
+*/
