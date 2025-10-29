@@ -1,8 +1,11 @@
 locals {
-  property_hostnames = [
-        for h in data.akamai_property_hostnames.my-property-hostnames.hostnames : h.cname_from
+  app_hostnames = [
+        for app in var.apps : "${app}.nobodycaresworkharder.com"
     ]
-  notes = "${data.akamai_group.jg_tf_group.id}.TF-3001}"
+}
+
+output "app_output" {
+  value = local.app_hostnames  
 }
 
 data "akamai_group" "jg_tf_group" {
