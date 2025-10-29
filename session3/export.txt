@@ -1,0 +1,12 @@
+export TF_VAR_akamai_client_secret="Wvx4Qhy/cpE1Br9t5P96S6JimmcBv2mQt5NHbX2aWGU="
+export TF_VAR_akamai_host="akab-wwhchrtv4awetfau-ikolaiyt3ct44mho.luna.akamaiapis.net"
+export TF_VAR_akamai_access_token="akab-bahmbhai4c6b7fvl-pvohftmpskxcbnvw"
+export TF_VAR_akamai_client_token="akab-fjyqsm45y5l7c3a4-vfok7ll2xklunhbs"
+export TF_VAR_akamai_account_key="1-6JHGX:1-8BYUX"
+
+[akamai_proserv]
+client_secret = Wvx4Qhy/cpE1Br9t5P96S6JimmcBv2mQt5NHbX2aWGU=
+host = akab-wwhchrtv4awetfau-ikolaiyt3ct44mho.luna.akamaiapis.net
+access_token = akab-bahmbhai4c6b7fvl-pvohftmpskxcbnvw
+client_token = akab-fjyqsm45y5l7c3a4-vfok7ll2xklunhbs
+account_key = 1-6JHGX:1-8BYUX
