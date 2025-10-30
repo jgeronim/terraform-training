@@ -1,6 +1,6 @@
 locals {
   app_hostnames = [
-        for app in var.apps : "${app}.nobodycaresworkharder.com"
+        for app in var.apps : "${app}.nobodycaresworkharder.me"
     ]
 }
 
