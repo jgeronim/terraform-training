@@ -7,3 +7,9 @@ variable "edge_hn" {
 variable "apps" {
   default = [ "www", "api", "blog", "shop", "cdn"]
 }
+
+variable "activation_note" {
+  type        = string
+  default     = "Initial activation via Terraform"
+  description = "Note to be used for the property activation"
+}

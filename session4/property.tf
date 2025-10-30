@@ -26,16 +26,29 @@ resource "akamai_property_activation" "jgeronim_activation_1" {
      property_id = data.akamai_property.jg_property.id
      contact = ["jorge@nobodycaresworkharder.me"]
      network = "STAGING"
-     note = "Sample activation 1"
+     note = var.activation_note
      version = 1
+
+     lifecycle {
+      ignore_changes = [
+        note
+        ]
+        }
 }
 
 resource "akamai_property_activation" "jgeronim_activation_2" {
      property_id = data.akamai_property.jg_property.id
      contact = ["jorge@nobodycaresworkharder.me"]
      network = "PRODUCTION"
-     note = "Sample activation 2"
+     note = var.activation_note
      version = 1
+
+     lifecycle {
+       ignore_changes = [ 
+        note
+        ]
+     }
+     
      depends_on = [
       akamai_property_activation.jgeronim_activation_1
       ]
