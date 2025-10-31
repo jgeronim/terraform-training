@@ -1,16 +1,16 @@
 locals {
   app_hostnames = [
-        for app in var.apps : "${app}.nobodycaresworkharder.me"
-    ]
+    for app in var.apps : "${app}.nobodycaresworkharder.me"
+  ]
 }
 
 output "app_output" {
-  value = local.app_hostnames  
+  value = local.app_hostnames
 }
 
 data "akamai_group" "jg_tf_group" {
- group_name = "jgeronim"
- contract_id = "1-1NC95D"
+  group_name  = "jgeronim"
+  contract_id = "1-1NC95D"
 }
 
 data "akamai_property" "jg_property" {
@@ -25,5 +25,5 @@ data "akamai_property_hostnames" "my-property-hostnames" {
 }
 
 data "akamai_property_products" "my_products" {
-    contract_id = data.akamai_group.jg_tf_group.contract_id
+  contract_id = data.akamai_group.jg_tf_group.contract_id
 }
